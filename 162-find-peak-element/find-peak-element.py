@@ -6,7 +6,7 @@ class Solution(object):
         """
         left, right = 0, len(nums)-1,
 
-        while left< right:
+        while left < right:
             mid= (right+left)//2
 
             if nums[mid]<nums[mid+1]:
