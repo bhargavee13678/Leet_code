@@ -4,12 +4,11 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        s = s.split() 
-        lists = s[::-1]  
-        
-        return ' '.join(lists) 
-        
-        sentence=' '.join([word for word in lists])
-
-        return sentence
-        
+        s = s.split()
+        left = 0
+        right = len(s)-1
+        while left < right:
+            s[left] , s[right] = s[right], s[left]
+            left += 1
+            right -= 1
+        return " ".join(s)
